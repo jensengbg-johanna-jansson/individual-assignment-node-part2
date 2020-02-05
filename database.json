@@ -37,5 +37,17 @@
     }
   ],
   "cart": [
+    {
+      "productKey": "1",
+      "quantity": 1
+    },
+    {
+      "productKey": "3",
+      "quantity": 1
+    },
+    {
+      "productKey": "2",
+      "quantity": 1
+    }
   ]
 }
