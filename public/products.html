@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/dfc5fca1d3.js" crossorigin="anonymous"></script>
         <title> TOGEI Japanese ceramics </title>
     </head>
@@ -15,21 +15,21 @@
         </button>
         <nav class="menu menu--hidden">
             <ul class="menu--links--container">
-                <li><a href="" class="menu__link">Home</a></li>
+                <li><a href="index.html" class="menu__link">Home</a></li>
                 <li><button class="menu__link has__submenu">Products</button>
-                    <ul class="menu--products menu--hidden">
-                        <li><a href="" class="menu--products__link">All Products</a></li>
-                        <li><h3 class="menu--heading">Categories</h3></li>
-                        <li><a href="" class="menu--products__link">Bowls</a></li>
-                        <li><a href="" class="menu--products__link">Plates</a></li>
-                        <li><a href="" class="menu--products__link">Cups</a></li>
-                        <li><a href="" class="menu--products__link">Serving plates</a></li>
-                        <li><a href="" class="menu--products__link">Sake bottles</a></li>
-                        <li><a href="" class="menu--products__link">Tea pots</a></li>
-                        <li><h3 class="menu--heading">Sets</h3></li>
-                        <li><a href="" class="menu--products__link">Gift sets</a></li>
-                        <li><a href="" class="menu--products__link">Sake sets</a></li>
-                        <li><a href="" class="menu--products__link">Tea sets</a></li>
+                    <ul class="submenu menu--hidden">
+                        <li><a href="products.html" class="submenu__link">All Products</a></li>
+                        <li><h3 class="submenu__heading">Categories</h3></li>
+                        <li><a href="" class="submenu__link">Bowls</a></li>
+                        <li><a href="" class="submenu__link">Plates</a></li>
+                        <li><a href="" class="submenu__link">Cups</a></li>
+                        <li><a href="" class="submenu__link">Serving plates</a></li>
+                        <li><a href="" class="submenu__link">Sake bottles</a></li>
+                        <li><a href="" class="submenu__link">Tea pots</a></li>
+                        <li><h3 class="submenu__heading">Sets</h3></li>
+                        <li><a href="" class="submenu__link">Gift sets</a></li>
+                        <li><a href="" class="submenu__link">Sake sets</a></li>
+                        <li><a href="" class="submenu__link">Tea sets</a></li>
                     </ul>
                 </li>
                 <li><a href="" class="menu__link">Brands</a></li>
@@ -49,54 +49,15 @@
             <h2 class="section--heading">All Products</h2>
             <span class="number--products">00 products</span>
             <div class="product--container">
-                <!--
-                <article class="product--card small--card">
-                    <img src="" alt="">
-                    <div class="product--card__info--container">
-                        <h3 class="product--card--heading">product name</h3>
-                        <p class="product--card--brand">brand</p>
-                        <p class="product--card--price">200,00 SEK</p>
-                        <button class="product--card--addtocart__btn">Add to cart <span class="cart--icon__btn"><i class="fas fa-cart-plus"></i></span></button>        
-                    </div>
-                </article>
-                <article class="product--card small--card">
-                    <img src="" alt="">
-                    <div class="product--card__info--container">
-                        <h3 class="product--card--heading">product name</h3>
-                        <p class="product--card--brand">brand</p>
-                        <p class="product--card--price">200,00 SEK</p>
-                        <button class="product--card--addtocart__btn">Add to cart <span class="cart--icon__btn"><i class="fas fa-cart-plus"></i></span></button>        
-                    </div>
-                </article>
-                <article class="product--card small--card">
-                    <img src="" alt="">
-                    <div class="product--card__info--container">
-                        <h3 class="product--card--heading">product name</h3>
-                        <p class="product--card--brand">brand</p>
-                        <p class="product--card--price">200,00 SEK</p>
-                        <button class="product--card--addtocart__btn">Add to cart <span class="cart--icon__btn"><i class="fas fa-cart-plus"></i></span></button>        
-                    </div>
-                </article>
-                <article class="product--card small--card">
-                    <img src="" alt="">
-                    <div class="product--card__info--container">
-                        <h3 class="product--card--heading">product name</h3>
-                        <p class="product--card--brand">brand</p>
-                        <p class="product--card--price">200,00 SEK</p>
-                        <button class="product--card--addtocart__btn">Add to cart <span class="cart--icon__btn"><i class="fas fa-cart-plus"></i></span></button>        
-                    </div>
-                </article>
-                <article class="product--card small--card">
-                    <img src="" alt="">
-                    <div class="product--card__info--container">
-                        <h3 class="product--card--heading">product name</h3>
-                        <p class="product--card--brand">brand</p>
-                        <p class="product--card--price">200,00 SEK</p>
-                        <button class="product--card--addtocart__btn">Add to cart <span class="cart--icon__btn"><i class="fas fa-cart-plus"></i></span></button>        
-                    </div>
-                </article>
-            -->
+
             </div>
+        </section>
+        <section class="messages">
+            <span class="msg__icon">!</span>
+            <article class="message--container">
+                <h3 class="msg__heading"></h3>
+                <p class="msg__body"></p>    
+            </article>
         </section>
     </main>
     <footer class="footer--container">
@@ -132,14 +93,14 @@
         <article class="footer--links--container">
             <h4 class="footer--heading">Supported Payment Methods</h4>
             <ul class="footer--links payment--links">
-                <li><a href=""><i class="fab fa-cc-visa"></i></a></li>
-                <li><a href=""><i class="fab fa-cc-mastercard"></i></a></li>
-                <li><a href=""><i class="fab fa-cc-paypal"></i></a></li>
+                <li><i class="fab fa-cc-visa"></i></li>
+                <li><i class="fab fa-cc-mastercard"></i></li>
+                <li><i class="fab fa-cc-paypal"></i></li>
             </ul>
         </article>
-        <p>&copy; TOGEI 2020</p>
+        <p class="copy">&copy; TOGEI 2020</p>
     </footer>
     </div>
-<script src="js/index.js"></script>
+<script src="js/product.js" type="module"></script>
 </body>
 </html>

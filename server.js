@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 8000;
-const db = require('./databaseFunctions');
+const db = require('./appFunctions');
 
 app.use(express.static('public'));
 

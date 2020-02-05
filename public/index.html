@@ -15,21 +15,21 @@
         </button>
         <nav class="menu menu--hidden">
             <ul class="menu--links--container">
-                <li><a href="" class="menu__link">Home</a></li>
+                <li><a href="index.html" class="menu__link">Home</a></li>
                 <li><button class="menu__link has__submenu">Products</button>
-                    <ul class="menu--products menu--hidden">
-                        <li><a href="products.html" class="menu--products__link">All Products</a></li>
-                        <li><h3 class="menu--heading">Categories</h3></li>
-                        <li><a href="" class="menu--products__link">Bowls</a></li>
-                        <li><a href="" class="menu--products__link">Plates</a></li>
-                        <li><a href="" class="menu--products__link">Cups</a></li>
-                        <li><a href="" class="menu--products__link">Serving plates</a></li>
-                        <li><a href="" class="menu--products__link">Sake bottles</a></li>
-                        <li><a href="" class="menu--products__link">Tea pots</a></li>
-                        <li><h3 class="menu--heading">Sets</h3></li>
-                        <li><a href="" class="menu--products__link">Gift sets</a></li>
-                        <li><a href="" class="menu--products__link">Sake sets</a></li>
-                        <li><a href="" class="menu--products__link">Tea sets</a></li>
+                    <ul class="submenu menu--hidden">
+                        <li><a href="products.html" class="submenu__link">All Products</a></li>
+                        <li><h3 class="submenu__heading">Categories</h3></li>
+                        <li><a href="" class="submenu__link">Bowls</a></li>
+                        <li><a href="" class="submenu__link">Plates</a></li>
+                        <li><a href="" class="submenu__link">Cups</a></li>
+                        <li><a href="" class="submenu__link">Serving plates</a></li>
+                        <li><a href="" class="submenu__link">Sake bottles</a></li>
+                        <li><a href="" class="submenu__link">Tea pots</a></li>
+                        <li><h3 class="submenu__heading">Sets</h3></li>
+                        <li><a href="" class="submenu__link">Gift sets</a></li>
+                        <li><a href="" class="submenu__link">Sake sets</a></li>
+                        <li><a href="" class="submenu__link">Tea sets</a></li>
                     </ul>
                 </li>
                 <li><a href="" class="menu__link">Brands</a></li>
@@ -43,25 +43,27 @@
             </a>    
     </header>
     <span class="placeholder--header"></span>
+    <div class="body--container">
     <main class="main--container">
         <section class="campaigns--container">
-            <article class="campaigns--learnmore"></article>
-            <article class="campaigns--freeshipping"></article>
-            <article class="campaigns--newproducts"></article>
+            <article class="campaigns--learnmore">
+                <p class="campaigns--learnmore__body">Togei - Japanese Craftsmansship At Its Finest</p>
+                <button class="learn-more__btn">Learn More Now<span class="learn-more--icon__btn">></span></button>
+            </article>
+            <article class="campaigns--freeshipping">
+                <h2 class="campaigns--freeshipping__heading">Get Free Shipping</h2>
+                <p class="campaigns--freeshipping__body">Code <span class="campaign--code">FREESHIP</span></p>
+            </article>
+            <a href="" class="campaigns--newproducts">
+                <h2 class="campaigns--newproducts__heading">See Our New Products</h2>
+            </a>
         </section>
         <section class="newproducts--container">
             <h2 class="section--heading">New Products</h2>
-            <article class="product--card newproducts">
-                <img src="" alt="">
-                <div class="product--card__info--container">
-                    <h3 class="product--card--heading">product name</h3>
-                    <p class="product--card--brand">brand</p>
-                    <p class="product--card--price">200,00 SEK</p>
-                    <button class="product--card--addtocart__btn">Add to cart <span class="cart--icon__btn"><i class="fas fa-cart-plus"></i></span></button>        
-                </div>
-            </article>
-        </section>
+            <div class="product--container">
 
+            </div>
+        </section>
     </main>
     <footer class="footer--container">
         <article class="footer--links--container">
@@ -101,8 +103,9 @@
                 <li><a href=""><i class="fab fa-cc-paypal"></i></a></li>
             </ul>
         </article>
-        <p>&copy; TOGEI 2020</p>
+        <p class="copy">&copy; TOGEI 2020</p>
     </footer>
-<script src="js/index.js"></script>
+    </div>
+<script src="js/front.js" type="module"></script>
 </body>
 </html>

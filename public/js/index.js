@@ -9,7 +9,7 @@ let toggleBurgerMenu =  () => {
     let bodyToggle;
     
     
-    for (i = 0; i < menuContainer.length; i++) {
+    for (let i = 0; i < menuContainer.length; i++) {
         if(menuContainer[i] == 'menu--slide_in') {
             current = 'menu--slide_in';
             toggle = 'menu--slide_out';
@@ -19,7 +19,7 @@ let toggleBurgerMenu =  () => {
         }
     }
 
-    for (i = 0; i < bodyContainer.length; i++) {
+    for (let i = 0; i < bodyContainer.length; i++) {
         if(bodyContainer[i] == 'body--slide_in') {
             bodyCurrent = 'body--slide_in';
             bodyToggle = 'body--slide_out';
@@ -67,40 +67,40 @@ const addProductToCart = (productKey) => {
     .then((response) => {
         return response.json();   
     }).then((data) => {
+        let messageContainer = document.querySelector('.messages');
+        let messageHeading = document.querySelector('.msg__heading');
+        let messageBody = document.querySelector('.msg__body');
         console.log(data);
+        if(data.success == true) {
+            messageHeading.innerHTML = 'Success';
+            messageBody.innerHTML = data.message;
+            messageContainer.classList.add('success--msg');
+            messageContainer.addEventListener("animationend", function() {
+                messageContainer.classList.remove('success--msg');
+            });
+        } else {
+            messageHeading.innerHTML = 'Error';
+            messageBody.innerHTML = data.message;
+            messageContainer.classList.add('error--msg');
+            messageContainer.addEventListener("animationend", function() {
+                messageContainer.classList.remove('error--msg');
+            });
+        }
+        
         productsInCart();
     });
 }
 
-const numberOfProducts = () => {
-    const url = baseURL + '/products';
-    
-    fetch(url, {method: 'GET'})
-    .then((response) => {
-        return response.json();   
-    }).then((data) => {
-        let countProducts = data.length;
-        let numbProductsContainer = document.querySelector('.number--products');
+const createMainProductCard = (data) => {
+    let productContainer = document.querySelector('.product--container');
 
-        numbProductsContainer.innerHTML = countProducts + ' products';
-    });
-}
-
-const getAllProducts = () => {
-    const url = baseURL + '/products';
-
-    fetch(url, {method: 'GET'})
-    .then((response) => {
-        return response.json();   
-    }).then((data) => {
-        let productContainer = document.querySelector('.product--container');
-
-        for(i = 0; i < data.length; i++) {
+        for(let i = 0; i < data.length; i++) {
             // extract values from data
             let productKey = data[i].productKey;
             let name = data[i].productName;
             let brand = data[i].productBrand;
             let price = data[i].productPrice;
+            let img = data[i].productImg;
             
             // create HTML block for product card
             let article = document.createElement("article");
@@ -112,13 +112,15 @@ const getAllProducts = () => {
             let button = document.createElement("button");
 
             // set classes, attributes and innerHTML to all tags
-            article.className = 'product--card small--card';
+            article.className = 'product--card small--card product-card--mainstyles';
+            productImg.className = 'product--card__img';
             inforContainer.className = 'product--card__info--container';
             h3.className = 'product--card--heading';
             brandP.className = 'product--card--brand';
             priceP.className = 'product--card--price';
             button.className = 'product--card--addtocart__btn';
             
+            productImg.setAttribute('src', img);
             button.setAttribute('value', productKey);
 
             h3.innerHTML = name;
@@ -142,13 +144,11 @@ const getAllProducts = () => {
                 addProductToCart(this.value);
             });
         }
-    });
 }
-numberOfProducts();
-getAllProducts(); 
-
 
 document.querySelector('.burger--menu').addEventListener("click", toggleBurgerMenu); 
 document.querySelector('.has__submenu').addEventListener("click", function() {
     toggleBurgerMenu('sub');
 });
+
+export {createMainProductCard, productsInCart};

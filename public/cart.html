@@ -15,21 +15,21 @@
         </button>
         <nav class="menu menu--hidden">
             <ul class="menu--links--container">
-                <li><a href="" class="menu__link">Home</a></li>
+                <li><a href="index.html" class="menu__link">Home</a></li>
                 <li><button class="menu__link has__submenu">Products</button>
-                    <ul class="menu--products menu--hidden">
-                        <li><a href="" class="menu--products__link">All Products</a></li>
-                        <li><h3 class="menu--heading">Categories</h3></li>
-                        <li><a href="" class="menu--products__link">Bowls</a></li>
-                        <li><a href="" class="menu--products__link">Plates</a></li>
-                        <li><a href="" class="menu--products__link">Cups</a></li>
-                        <li><a href="" class="menu--products__link">Serving plates</a></li>
-                        <li><a href="" class="menu--products__link">Sake bottles</a></li>
-                        <li><a href="" class="menu--products__link">Tea pots</a></li>
-                        <li><h3 class="menu--heading">Sets</h3></li>
-                        <li><a href="" class="menu--products__link">Gift sets</a></li>
-                        <li><a href="" class="menu--products__link">Sake sets</a></li>
-                        <li><a href="" class="menu--products__link">Tea sets</a></li>
+                    <ul class="submenu menu--hidden">
+                        <li><a href="products.html" class="submenu__link">All Products</a></li>
+                        <li><h3 class="submenu__heading">Categories</h3></li>
+                        <li><a href="" class="submenu__link">Bowls</a></li>
+                        <li><a href="" class="submenu__link">Plates</a></li>
+                        <li><a href="" class="submenu__link">Cups</a></li>
+                        <li><a href="" class="submenu__link">Serving plates</a></li>
+                        <li><a href="" class="submenu__link">Sake bottles</a></li>
+                        <li><a href="" class="submenu__link">Tea pots</a></li>
+                        <li><h3 class="submenu__heading">Sets</h3></li>
+                        <li><a href="" class="submenu__link">Gift sets</a></li>
+                        <li><a href="" class="submenu__link">Sake sets</a></li>
+                        <li><a href="" class="submenu__link">Tea sets</a></li>
                     </ul>
                 </li>
                 <li><a href="" class="menu__link">Brands</a></li>
@@ -43,37 +43,15 @@
             </a>    
     </header>
     <span class="placeholder--header"></span>
+    <div class="body--container">
+        <div class="loader--container hidden fadeInAnimation">
+            <div class="loader"></div>
+        </div>
     <main class="main--container">
         <section class="cart-items--container">
             <h2 class="section--heading">Cart</h2>
             <div class="cart-product--container">
-                <article class="product-card--cart">
-                    <img src="" alt="">
-                    <div class="product-card--cart__info--container">
-                        <button class="delete-product__btn"><i class="fas fa-trash-alt"></i></button>
-                        <h3 class="product-card--cart--heading">product name</h3>
-                        <p class="product-card--cart--brand">brand</p>
-                        <p class="product-card--cart--price">200,00 SEK</p>
-                    </div>
-                </article>    
-                <article class="product-card--cart">
-                    <img src="" alt="">
-                    <div class="product-card--cart__info--container">
-                        <button class="delete-product__btn"><i class="fas fa-trash-alt"></i></button>
-                        <h3 class="product-card--cart--heading">product name</h3>
-                        <p class="product-card--cart--brand">brand</p>
-                        <p class="product-card--cart--price">200,00 SEK</p>
-                    </div>
-                </article>    
-                <article class="product-card--cart">
-                    <img src="" alt="">
-                    <div class="product-card--cart__info--container">
-                        <button class="delete-product__btn"><i class="fas fa-trash-alt"></i></button>
-                        <h3 class="product-card--cart--heading">product name</h3>
-                        <p class="product-card--cart--brand">brand</p>
-                        <p class="product-card--cart--price">200,00 SEK</p>
-                    </div>
-                </article>    
+                <h3 class="cart--hasProducts hidden">Your cart is empty</h3>   
             </div>
             <div class="cart--subtotal">
                 <h3 class="cart--subtotal__heading">Subtotal</h3>
@@ -120,8 +98,9 @@
                 <li><a href=""><i class="fab fa-cc-paypal"></i></a></li>
             </ul>
         </article>
-        <p>&copy; TOGEI 2020</p>
+        <p class="copy">&copy; TOGEI 2020</p>
     </footer>
-<script src="js/index.js"></script>
+    </div>
+<script src="js/cart.js" type="module"></script>
 </body>
 </html>
